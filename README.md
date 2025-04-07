@@ -1,129 +1,127 @@
-# Ruby Brakeman Report Comparator 🚀
+# 🚀 Brakeman Report Comparator
 
-A simple yet powerful tool to compare Brakeman reports before and after deployment. Save time, avoid manual comparisons, and let this tool do the heavy lifting for you! 🎉
+**The ultimate tool to compare static analysis reports for Ruby on Rails apps.**
 
-![Screenshot from 2025-04-07 17-40-02](https://github.com/user-attachments/assets/f33a02db-b416-4e80-9554-2c11d32cb427)
-
----
-
-## Why Do We Need This Tool? 🤔
-
-Brakeman is a static analysis tool that helps identify security vulnerabilities in Ruby on Rails applications. However, comparing Brakeman reports manually can be tedious and error-prone, especially when dealing with large applications or frequent deployments. 
-
-This tool automates the comparison process, ensuring:
-- Faster identification of new vulnerabilities introduced after deployment.
-- Reduced human error in analyzing differences.
-- A clear and concise comparison report for better decision-making.
+> Tired of manually scanning Brakeman reports for security changes between deployments? We've got you covered.
 
 ---
 
-## How Does It Help? 💡
+## 🔍 Overview
 
-- **Time-Saving**: Automates the comparison of "Before Deployment" and "After Deployment" Brakeman reports.
-- **Accuracy**: Eliminates the risk of missing critical changes in the reports.
-- **Convenience**: Generates a detailed comparison report that is easy to understand and share.
-- **Integration**: Works seamlessly with your existing workflow, requiring minimal setup.
+Brakeman Report Comparator is a lightweight, intuitive web tool that helps you quickly compare two Brakeman-generated HTML reports — before and after deployment. Designed specifically for Ruby on Rails developers, it ensures no vulnerability goes unnoticed.
 
 ---
 
-## Steps to Setup the Comparison Tool 🛠️
+This tool is perfect if you're searching for:
+- Ruby on Rails security report comparison
+- Brakeman static analysis tool
+- Compare Brakeman HTML reports
+- Rails security auditing tools
+- Brakeman before-after report diff
+- Static analysis for Ruby apps
+- Brakeman vulnerability scanner
+- Brakeman automation tools
 
-### Step :one ➞️ Clone the Repository
+---
 
-* Open your terminal and navigate to your desired project location.
-* Run the following command to clone the repository:
+## ⚙️ How It Works
 
-  ```bash
-  git clone git@github.com:bharani335/brakeman_report_comparator.git
-  ```
-* The tool will now be cloned into a folder named brakeman_report_comparator.
+1. Run Brakeman before and after deployment.
+2. Use this tool to upload both reports.
+3. See a clean, easy-to-read diff of vulnerabilities that were added or resolved.
 
+---
 
-## Step :two ➞️ Install the Dependencies
+## 🧑‍💻 Getting Started
 
-Navigate to the root folder of the project:
+### Step 1: Clone the Repo
+```bash
+git clone https://github.com/bharani335/brakeman_report_comparator.git
+cd brakeman_report_comparator
+```
 
-> If you're on Linux, Python is likely pre-installed. If not, install Python before proceeding.
-
-Run the following command to install the required dependencies:
-
+### Step 2: Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
-## Step :three ➞️ Use the Virtual Environment
-
-Configure your IDE (e.g., Visual Studio Code, PyCharm) to use the Python executable located in the `.venv/bin` folder.
-
----
-
-## 🖥️ Running the Tool in the Localhost
-
-Run the `app.py` file in the terminal where you executed `source setup.sh`:
-
-Open your browser and navigate to:
-
+### Step 3: Run Locally
+```bash
+python app.py
 ```
-http://localhost:5000
-```
+Then open: `http://localhost:5000`
 
-1. Upload the **"Before Deployment"** and **"After Deployment"** HTML files.
-2. Wait a few seconds for the magic to happen! ✨
-3. View the comparison report directly in your browser.
-4. The compared report will also be saved in the `templates` directory for future reference.
+Upload the two reports and get a comparison in seconds! 🚀
 
 ---
 
-## 😅 Git Ethics
+## 📸 Screenshots
 
-⭐ **Always raise pull requests against the `main` branch.**
-
-⭐ **Ensure your PR is reviewed and approved before merging.**
+![Screenshot from 2025-04-07 17-40-02](https://github.com/user-attachments/assets/72f9e1a5-d32e-4ca3-baa3-8e30099801f5)
 
 ---
 
-## 👍 Do's & 👎 Don't's
+## ✅ Features
 
-### ✅ Do's
-- Use **smart commits** for time tracking. ⏱️  
-- Write **proper comments, documentation, and test steps**. 🗑️  
-- Be **kind and respectful** to your fellow developers. 🤝  
-
-### ❌ Don't's
-- Never remove someone else's code without proper discussion. 😢
-- Avoid committing directly to the `main` branch. 🚫  
+- 📊 Side-by-side comparison
+- 🧠 Highlights newly introduced vulnerabilities
+- 💾 Stores the diff report in `templates/`
+- 🌐 Works offline and locally
+- ⚡ Fast, lightweight, no login required
 
 ---
 
-## ❓ FAQ
+## 🔐 Why Brakeman?
+Brakeman is a popular static analysis tool that scans Rails code for security vulnerabilities.
 
-**Q: What types of files can I upload?**  
-**A:** The tool supports HTML files generated by **Brakeman**.
+But comparing its outputs over time? Not so friendly.
 
-**Q: Where is the comparison report saved?**  
-**A:** The report is saved in the `templates` directory as:  
-`compared_Brakeman_Report_after_with_Brakeman_Report_before.html`
-
-**Q: Can I run this tool on Windows?**  
-**A:** Yes! Just ensure Python is installed and follow the setup steps.
+This tool bridges that gap, making security regression checks quick, visual, and easy to share.
 
 ---
 
-## 📞 Contact
-
-For any assistance or queries, feel free to reach out to the contact person mentioned in the project. We're here to help! 😇
-
----
-
-## 🎉 Fun Fact
-
-**Did you know?**  
-Brakeman is named after the **brakemen** who used to manually slow down trains.  
-Similarly, this tool helps you **slow down and carefully analyze** your security reports! 🚂
+## 📦 File Support
+Only HTML files generated by [Brakeman](https://brakemanscanner.org/).
 
 ---
 
-**Happy Coding!** 💻✨
+## 🤝 Contributions
+
+PRs are welcome! You can:
+- Add dark mode 🌙
+- Export to PDF/CSV 📁
+- Add CLI support 💻
+- Build GitHub Actions integration 🧩
+
+---
+
+## 💬 FAQ
+
+**Q: Can I use this on Windows/Mac/Linux?**
+Yes — it's a Python app that works anywhere.
+
+**Q: Does it upload my files anywhere?**
+No. All processing is done locally.
+
+**Q: Where is the result stored?**
+`templates/compared_Brakeman_Report_after_with_Brakeman_Report_before.html`
+
+---
+
+## 📣 Let's Connect!
+- GitHub: [@bharani335](https://github.com/bharani335)
+- Email: listed on repo profile
+
+Feel free to raise issues, feature requests, or just share feedback.
+
+---
+
+## 🛤️ Fun Fact
+> "Brakeman" was a train crew member who applied brakes before automated systems. Just like that, this tool helps **halt bad deployments** before they reach production. 🚂
+
+---
+
+**Secure smarter. Compare faster. Ship safer.** 🔐
+
+---
 
