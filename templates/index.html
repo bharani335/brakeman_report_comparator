@@ -4,84 +4,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Upload Brakeman Reports</title>
+  <title>🚀 Brakeman Report Comparator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      background: linear-gradient(to right, #ece9e6, #ffffff);
-      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+      font-family: 'Outfit', sans-serif;
       margin: 0;
       padding: 0;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
     }
 
     .header, .footer {
       position: fixed;
       width: 100%;
       left: 0;
-      background: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
-      color: white;
       text-align: center;
-      padding: 10px 0;
+      padding: 12px 0;
+      color: white;
       z-index: 1000;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .header {
       top: 0;
+      background: linear-gradient(90deg, #4158D0 0%, #C850C0 50%, #FFCC70 100%);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
     }
 
     .footer {
       bottom: 0;
-    }
-
-    form {
-      background-color: #fff;
-      max-width: 700px;
-      margin: 140px auto 80px;
-      padding: 50px;
-      border-radius: 12px;
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 28px;
-      margin-bottom: 10px;
-      color: #333;
-    }
-
-    label {
-      font-weight: 600;
-      color: #444;
-    }
-
-    input[type="file"] {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    input[type="submit"] {
-      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-      color: white;
-      font-size: 16px;
-      font-weight: 600;
-      border: none;
-      border-radius: 6px;
-      padding: 12px;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-    }
-
-    input[type="submit"]:hover {
-      opacity: 0.9;
-      transform: translateY(-1px);
+      background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
     }
 
     .logo {
@@ -90,16 +47,81 @@
       display: block;
     }
 
-    @media print {
-      .noprint {
-        display: none;
-      }
+    form {
+      background-color: #fff;
+      max-width: 650px;
+      width: 90%;
+      margin-top: 120px;
+      margin-bottom: 100px;
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    form:hover {
+      transform: translateY(-3px);
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    label {
+      font-weight: 600;
+      color: #222;
+      text-align: left;
+    }
+
+    input[type="file"] {
+      padding: 10px;
+      border: 2px dashed #aaa;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: #f9f9f9;
+      transition: border 0.3s ease-in-out;
+    }
+
+    input[type="file"]:hover {
+      border-color: #6a11cb;
+    }
+
+    input[type="submit"] {
+      background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      padding: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    input[type="submit"]:hover {
+      opacity: 0.9;
+      transform: scale(1.02);
+    }
+
+    .footer p {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 500;
     }
 
     @media (max-width: 768px) {
+      h1 {
+        font-size: 26px;
+      }
       form {
-        padding: 30px;
-        margin: 160px 20px 100px;
+        padding: 30px 20px;
       }
     }
   </style>
@@ -108,21 +130,22 @@
 <body>
   <div class="header noprint">
     <img class="logo" src="https://raw.githubusercontent.com/bharani335/brakeman_report_comparator/master/brakeman.png" alt="Brakeman Logo">
+    <h2>🕵️‍♂️ Brakeman Report Comparator</h2>
   </div>
 
   <form class="noprint" method="post" action="/upload" enctype="multipart/form-data">
-    <h1>Compare Brakeman Reports</h1>
-    <label for="file1">Upload Report: <em>Before Deployment</em></label>
+    <h1>Let's Compare Some Reports! 🎯</h1>
+    <label for="file1">📄 Upload Report: <em>Before Deployment</em></label>
     <input type="file" name="file1" id="file1" required>
 
-    <label for="file2">Upload Report: <em>After Deployment</em></label>
+    <label for="file2">📄 Upload Report: <em>After Deployment</em></label>
     <input type="file" name="file2" id="file2" required>
 
-    <input type="submit" value="Generate Comparison">
+    <input type="submit" value="✨ Generate Comparison">
   </form>
 
   <div class="footer noprint">
-    <p>Brakeman Report Comparator &copy; 2025 | Secure Smarter</p>
+    <p>🚀 Built for better security — Compare smart, code safe! | &copy; 2025</p>
   </div>
 </body>
 
